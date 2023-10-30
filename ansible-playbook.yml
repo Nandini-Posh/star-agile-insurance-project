@@ -11,10 +11,12 @@
     become : yes
     become_user : root
 
-  - name : Start Docker Service
-    command : sudo systemctl start docker
-    become : yes
-    become_user : root
+ # - name : Start Docker Service
+  #  command : sudo systemctl start docker
+   # become : yes
+    #become_user : root
 
   - name: Deploy Docker Container
-    command: docker run -itd -p 8084:8081 shubhamkushwah123/insure-me:3.0
+    command: docker run -itd -p 8084:8081 nansathish/nandini-insurance-app:26
+
+
