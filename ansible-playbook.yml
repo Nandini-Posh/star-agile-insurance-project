@@ -6,17 +6,17 @@
   - name: updating apt
     command : sudo apt-get update
 
-  - name : Install Docker( to test github webhook)
+  - name : Install Docker
     command : sudo apt-get install -y docker.io
     become : yes
     become_user : root
 
-  - name : Start Docker Service
-    command : sudo systemctl start docker
-    become : yes
-    become_user : root
+ # - name : Start Docker Service
+  #  command : sudo systemctl start docker
+   # become : yes
+    #become_user : root
 
   - name: Deploy Docker Container
-    command: docker run -itd -p 8089:8081 nansathish/nandini-insurance-app:26
+    command: docker run -itd -p 8088:8081 nansathish/nandini-insurance-app:26
 
 
